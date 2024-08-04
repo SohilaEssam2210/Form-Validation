@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+  --green-200: hsl(148, 38%, 91%);
+  --green-600: hsl(169, 82%, 27%);
+  --red: hsl(0, 66%, 54%);
+  --white: hsl(0, 0%, 100%);
+  --Grey-500: hsl(186, 15%, 59%);
+  --Grey-900: hsl(187, 24%, 22%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  background-color: var(--green-200);
+  max-height: 100vh;
+}
+
+*:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input[type=radio] {
+  accent-color: hsl(169, 82%, 27%);
+}
+
+input[type=checkbox] {
+  accent-color: hsl(169, 82%, 27%);
+  width: 15px;
+}
+
+.radio-selected {
+  background-color: hsl(148, 38%, 91%);
+  border: 1px solid hsl(169, 82%, 27%);
+}
+
+.container {
+  background-color: var(--white);
+  width: 90%;
+  max-width: 550px;
+  padding: 30px;
+  margin: 25px auto;
+  border-radius: 10px;
+}
+
+.container form h1 {
+  font-size: 25px;
+  color: var(--Grey-900);
+  margin-bottom: 25px;
+}
+
+.name {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.name .first-name label,
+.name .last-name label,
+.email label,
+.type>label,
+.message label {
+  display: inline-block;
+  font-size: 14px;
+  color: var(--Grey-900);
+  margin-bottom: 10px;
+}
+
+.star {
+  color: var(--green-600);
+}
+
+.name .first-name {
+  width: 50%;
+  margin-right: 10px;
+}
+
+.name .last-name {
+  width: 48%;
+}
+
+.name .first-name input,
+.name .last-name input,
+.email input {
+  width: 100%;
+  padding: 10px 5px;
+  border-radius: 6px;
+  border: 1px solid var(--Grey-500);
+  transition: all 0.4s;
+}
+
+.name .first-name input:focus,
+.name .last-name input:focus,
+input:focus {
+  border: 1px solid var(--green-600);
+}
+
+.email {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.type,
+.message {
+  margin-bottom: 20px;
+}
+
+.querys label,
+.check label {
+  font-size: 15px;
+  color: var(--Grey-900);
+  cursor: pointer;
+}
+
+.querys {
+  display: flex;
+  gap: 10px;
+}
+
+.querys .query-type {
+  width: 50%;
+  padding: 8px 5px;
+  border-radius: 6px;
+  border: 1px solid var(--Grey-500);
+  display: flex;
+  align-items: center;
+  transition: background-color 0.4s ease-in-out;
+}
+
+.querys .query-type input {
+  margin: 0 11px;
+  border: 1px solid var(--green-200);
+  cursor: pointer;
+}
+
+.message textarea {
+  display: block;
+  border: 1px solid var(--Grey-500);
+  border-radius: 6px;
+  resize: none;
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+}
+
+.check {
+  margin-bottom: 20px;
+}
+
+.check-box input {
+  margin-right: 10px;
+  margin-top: 2px;
+}
+
+.check-box {
+  display: flex;
+  align-items: center;
+}
+
+.btn button {
+  width: 100%;
+  border: none;
+  padding: 15px;
+  border-radius: 6px;
+  background-color: var(--green-600);
+  cursor: pointer;
+  color: var(--white);
+  transition: background-color 0.3s ease;
+}
+
+.btn button:hover {
+  background-color: hsl(169, 78%, 21%);
+}
+
+span.error {
+  color: var(--red);
+  font-size: 13px;
+  margin-top: 2px;
+  display: block;
+}
+
+span.hidden {
+  display: none;
+}
+
+.toast {
+  position: fixed;
+  top: 18px;
+  left: 262px;
+  width: 400px;
+  background-color: hsl(187, 24%, 22%);
+  padding: 20px;
+  border-radius: 10px;
+  color: hsl(0, 0%, 100%);
+  font-size: 14px;
+  transition: all 1s linear;
+  cursor: pointer;
+}
+
+.toast>div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.toast img {
+  width: 14px;
+}
+
+.toast span {
+  font-weight: bold;
+}
+
+.toast.hidden {
+  transform: translateY(-400px);
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 90%;
+  }
+
+  .name .first-name,
+  .name .last-name {
+    flex: 1 1 100%;
+  }
+
+  .querys .general,
+  .querys .support {
+    flex: 1 1 100%;
+  }
+
+  .toast {
+    position: fixed;
+    top: 18px;
+    left: 26px;
+    width: 400px;
+    background-color: hsl(187, 24%, 22%);
+    padding: 20px;
+    border-radius: 10px;
+    color: hsl(0, 0%, 100%);
+    font-size: 14px;
+    transition: all 1s linear;
+    cursor: pointer;
+  }
+}
