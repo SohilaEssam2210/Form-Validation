@@ -195,7 +195,7 @@ span.hidden {
 .toast {
   position: fixed;
   top: 18px;
-  left: 262px;
+  left: 558px;
   width: 400px;
   background-color: hsl(187, 24%, 22%);
   padding: 20px;
@@ -225,7 +225,7 @@ span.hidden {
   transform: translateY(-400px);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 981px) {
   .container {
     width: 90%;
   }
@@ -243,8 +243,8 @@ span.hidden {
   .toast {
     position: fixed;
     top: 18px;
-    left: 26px;
-    width: 400px;
+    left: 58px;
+    width: 75%;
     background-color: hsl(187, 24%, 22%);
     padding: 20px;
     border-radius: 10px;
